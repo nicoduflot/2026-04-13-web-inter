@@ -14,20 +14,178 @@
 </head>
 <!-- une seule balise body par page -->
 <body>
-    <header>
+    <header role="banner">
         <div>
-            <span>Formation HTML - CSS</span>
+            <span class="site-title">Formation HTML - CSS</span>
         </div>
     </header>
-    <nav>
-
+    <nav role="navigation">
+        <div>
+            <ul>
+                <li>
+                    <a href="./index.html" title="Introduction HTML CSS" aria-current="page" target="_self">Introduction</a>
+                </li>
+                <li>
+                    <a href="./media.html" title="Les media en HTML - CSS" target="_self">Media</a>
+                </li>
+                <li>
+                    <a href="./formulaire.html" title="Les formulaires en HTML - CSS" target="_self">Contact</a>
+                </li>
+                <li>
+                    <a href="./animations.html" title="Les animations en HTML - CSS" target="_self">Animations</a>
+                </li>
+                <li>
+                    <a href="./bootstrap.html" title="Le framework CSS bootstrap" target="_self">Bootstrap</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <!-- La balise main ne doit apparaître qu'une seule fois par page -->
     <main>
-
+        <header>
+            <h1>Introduction HTML CSS</h1>
+        </header>
+        <aside>
+            <span>Table des matières</span>
+            <ul>
+                <li>
+                    <a href="#bases-en-html">Bases en HTML</a>
+                    <ul>
+                        <li>
+                            <a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#bases-en-css">Bases en CSS</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- On divise le sujet "HTML CSS en deux partie distincte en utilisant les sections" -->
+        <section>
+            <!-- Partie principale sur les bases du HTML -->
+            <header>
+                <h2 id="bases-en-html">Bases en HTML</h2>
+            </header>
+            <!-- On va séparer en sous section -->
+            <section>
+                <header>
+                    <h3 id="balises-de-contenu-de-texte">Balises de contenu de texte</h3>
+                </header>
+                <article>
+                    <h4>Les paragraphes</h4>
+                    <p>
+                        Les paragraphes séparent les blocs de texte à la verticale, mais s'il faut faire un retour chariot à l'intérieur de celui-ci, il faut utiliser la balise br : <br />
+                        Elle permet un retour à la ligne dans le flux du texte du paragraphe.
+                    </p>
+                    <h5>Exemple paragraphes et retours chariot</h5>
+                    <p>
+                        Mon petit garçon
+                    </p>
+                    <p>
+                        n'est pas à l'école, <br />Donc je dois télétravailler
+                    </p>
+                </article>
+                <article>
+                    <h4>Les listes non-ordonnées</h4>
+                    <ul>
+                        <li>élément de liste</li>
+                        <li>élément de liste
+                            <ul>
+                                <li>élément de sous-liste</li>
+                                <li>élément de sous-liste
+                                    <ul>
+                                        <li>élément de sous-sous-liste</li>
+                                    </ul>
+                                </li>
+                                <li>élément de sous-liste</li>
+                            </ul>
+                        </li>
+                        <li>élément de liste</li>
+                    </ul>
+                </article>
+                <article>
+                    <h4>Les listes ordonnées</h4>
+                    <ol>
+                        <li>élément de liste</li>
+                        <li>élément de liste
+                            <ol type="I">
+                                <li>élément de sous-liste</li>
+                                <li>élément de sous-liste
+                                    <ol type="a">
+                                        <li>élément de sous-sous-liste</li>
+                                        <li>élément de sous-sous-liste</li>
+                                    </ol>
+                                </li>
+                                <li>élément de sous-liste</li>
+                            </ol>
+                        </li>
+                        <li>élément de liste</li>
+                    </ol>
+                    <p>
+                        Je dois couper la liste, il faut ensuite la rependre
+                    </p>
+                    <ol start="4">
+                        <li>élément de liste</li>
+                    </ol>
+                </article>
+                <article>
+                    <h4>Les liste descriptives</h4>
+                    <dl>
+                        <dt>Terme à décrire</dt>
+                        <dd>Description du terme</dd>
+                        
+                        <dt>secpnd terme à décrire</dt>
+                        <dd>Description du second terme</dd>
+                    </dl>
+                    <h5>Exemple concret</h5>
+                    <dl>
+                        <dt>Paris</dt>
+                        <dd>Capitale de la France</dd>
+                        
+                        <dt>Lyon</dt>
+                        <dd>Centre Bocuse</dd>
+                        
+                        <dt>Lille</dt>
+                        <dd>"Les gens du Nord ont dans leurs yeux le bleu qui manque à leur décor"</dd>
+                    </dl>
+                </article>
+                <article>
+                    <h4>Les citations</h4>
+                    <p>
+                        On commence par la balise blockquote :
+                    </p>
+                    <blockquote>
+                        <p>
+                            La balise blockquote met en exergue son contenu en ajoutant des marges extérieures à gauche et à droite.
+                        </p>
+                    </blockquote>
+                    <p>
+                        Pour afficher une citation complète (citation, source, auteur, etc.) on va compléter avec toutes les balises en rapport avec les citations
+                    </p>
+                    <blockquote>
+                        <p>
+                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                        </p>
+                        <p>
+                            <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997 (ISBN 2-84172-045-4), p. 173</cite>
+                        </p>
+                    </blockquote>
+                </article>
+            </section>
+        </section>
+        <section>
+            <!-- Partie principale sur les bases du CSS -->
+            <header>
+                <h2 id="bases-en-css">Bases en CSS</h2>
+            </header>
+            <!-- On va séparer en sous section -->
+        </section>
     </main>
     <footer>
-
+        <div>
+            &copy; DAWAN - 2026
+        </div>
     </footer>
 </body>
 </html>
