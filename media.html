@@ -70,6 +70,43 @@
                         place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par
                         exemple, sa largeur, la hauteur garde le ratio (l'homothétie, le rapport hauteur / largeur)
                     </p>
+                    <p>
+                        La balise image est en affichage inline, c'est à dire qu'elle "suit" le flux du texte ou des éléments qui la précèdent et qui la suivent. <img class="gauche" src="./images/doc-signal-200w.png" alt="description de l'image" />, il faut soit créer des classes qui permettent de "pousser" l'image à gauche ou à droite d'un contenu, soit appeler les image en dehors des paragraphes.
+                    </p>
+                    <div style="clear: both;"></div>
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt=""  class="vignette-100" />
+                    <img src="./images/synthwave-vibe-james-white-signalnoise-w400.png" alt=""  class="vignette-100" />
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt=""  class="miniature-100" />
+                    <img src="./images/synthwave-vibe-james-white-signalnoise-w400.png" alt=""  class="miniature-100" />
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt=""  class="avatar-100" />
+                    <img src="./images/synthwave-vibe-james-white-signalnoise-w400.png" alt=""  class="avatar-100" />
+                    <img src="./images/pip-boy-boy.png" alt=""  class="avatar-100 avatar-center-top" />
+                </article>
+                <article>
+                    <h4>La balise Picture</h4>
+                    <p>
+                        La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible
+                        autour de l'image affichée, on peut sélectionner la même image dans des formats différents.
+                    </p>
+                    <picture>
+                        <source srcset="./images/doc-signal-394w.png" media="(min-width: 600px)" />
+                        <source srcset="./images/doc-signal-250w.png" media="(min-width: 400px)" />
+                        <img src="./images/doc-signal-200w.png" />
+                    </picture>
+                </article>
+                <article>
+                    <h4>La balise figure</h4>
+                    <p>
+                        Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement
+                        et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter
+                        une légende, avec la balise figcaption.
+                    </p>
+                    <figure>
+                        <img loading="lazy" src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="description de l'image" />
+                        <figcaption>
+                            Wallpaper pour écran d'ordinateur sur l'univers de Fallout 4
+                        </figcaption>
+                    </figure>
                 </article>
             </section>
         </section>

@@ -169,7 +169,34 @@ Déclarations générales
 Déclaration des classes
 */
 
+.gauche{
+    float: left;
+}
 
+.vignette-100{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.miniature-100{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-color: black;
+}
+
+.avatar-100{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.avatar-center-top{
+    object-position: center top;
+}
 
 /*
 Déclaration selon la structure html
