@@ -54,6 +54,9 @@
                         <li>
                             <a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a>
                         </li>
+                        <li>
+                            <a href="#balises-de-modification-de-texte">Balises de modification de texte</a>
+                        </li>
                     </ul>
                 </li>
                 <li>
@@ -243,6 +246,24 @@
                         </tr>
                     </table>
                 </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="balises-de-modification-de-texte">Balises de modification de texte</h3>
+                </header>
+                <p>
+                    Il existait des balises pour changer la couleur, la taille et la police de caractère d'une portion de texte, la balise "font", mais <font color="red" face="Impact" size="4">elle est dépréciée.</font>. On utilisera à la place un balise span à laquelle on associera une classe CSS qui comprendra le style qu'on appliquer à la portion de texte.
+                </p>
+                <style>
+                    .danger{
+                        color: red;
+                        font-family: Impact;
+                        font-size: large;
+                    }
+                </style>
+                <p>
+                    Voilà un exemple de l'association d'une balise "span" <span class="danger">avec une classe</span>.
+                </p>
             </section>
         </section>
         <section>
