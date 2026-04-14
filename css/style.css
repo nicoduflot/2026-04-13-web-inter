@@ -149,4 +149,19 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
 :root{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    line-height: 1.5rem;
+}
+
+
+
+/* CSS impression */
+@media print{
+    @page{
+        size: portrait;
+        padding: 2cm 1cm;
+    }
+
+    body > nav{
+        display: none;
+    }
 }
