@@ -152,7 +152,34 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     line-height: 1.5rem;
 }
 
+/* 
+Déclarations générales 
+- tous les éléments du sélecteur balise appliquent quelque chose
+*/
 
+/* le signe * (asterisque) correspond à n'importe quel élément dans le document, depuis <html> aux balises de la descendance entière  */
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+/*
+Déclaration des classes
+*/
+
+
+
+/*
+Déclaration selon la structure html
+*/
+
+
+
+/*
+Déclaration selon l'affichage : media-queries
+*/
 
 /* CSS impression */
 @media print{

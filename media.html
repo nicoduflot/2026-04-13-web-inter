@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les media avec HTML CSS | Formation HTML - CSS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header role="banner">
+        <div>
+            <span class="site-title">Formation HTML - CSS</span>
+        </div>
+    </header>
+    <nav role="navigation">
+        <div>
+            <ul>
+                <li>
+                    <a href="./index.html" title="Introduction HTML CSS" target="_self">Introduction</a>
+                </li>
+                <li>
+                    <a href="./media.html" title="Les media en HTML - CSS" aria-current="page" target="_self">Media</a>
+                </li>
+                <li>
+                    <a href="./formulaire.html" title="Les formulaires en HTML - CSS" target="_self">Contact</a>
+                </li>
+                <li>
+                    <a href="./animations.html" title="Les animations en HTML - CSS" target="_self">Animations</a>
+                </li>
+                <li>
+                    <a href="./bootstrap.html" title="Le framework CSS bootstrap" target="_self">Bootstrap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- La balise main ne doit apparaître qu'une seule fois par page -->
+    <main>
+        <header>
+            <h1>Les media avec HTML CSS</h1>
+        </header>
+        <aside>
+            <span>Table des matières</span>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#media-heberges">Media hébergés</a>
+                        <ul>
+                            <li>
+                                <a href="#les-images">Les images</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <section>
+            <header>
+                <h2 id="media-heberges">Media hébergés</h2>
+            </header>
+            <!-- On va séparer en sous section -->
+            <section>
+                <header>
+                    <h3 id="les-images">Les images</h3>
+                </header>
+                <article>
+                    <h4>La balise img</h4>
+                    <p>
+                        img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa
+                        place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par
+                        exemple, sa largeur, la hauteur garde le ratio (l'homothétie, le rapport hauteur / largeur)
+                    </p>
+                </article>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div>
+            &copy; DAWAN - 2026
+        </div>
+    </footer>
+</body>
+
+</html>
