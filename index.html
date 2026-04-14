@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +12,7 @@
         * les liens vers les fichiers CSS de style du document
         * les liens vers les fichiers scripts (par exemple javascript)
     -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <!-- une seule balise body par page -->
 <body>
@@ -23,7 +25,8 @@
         <div>
             <ul>
                 <li>
-                    <a href="./index.html" title="Introduction HTML CSS" aria-current="page" target="_self">Introduction</a>
+                    <a href="./index.html" title="Introduction HTML CSS" aria-current="page"
+                        target="_self">Introduction</a>
                 </li>
                 <li>
                     <a href="./media.html" title="Les media en HTML - CSS" target="_self">Media</a>
@@ -47,22 +50,29 @@
         </header>
         <aside>
             <span>Table des matières</span>
-            <ul>
-                <li>
-                    <a href="#bases-en-html">Bases en HTML</a>
-                    <ul>
-                        <li>
-                            <a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a>
-                        </li>
-                        <li>
-                            <a href="#balises-de-modification-de-texte">Balises de modification de texte</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#bases-en-css">Bases en CSS</a>
-                </li>
-            </ul>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#bases-en-html">Bases en HTML</a>
+                        <ul>
+                            <li>
+                                <a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a>
+                            </li>
+                            <li>
+                                <a href="#balises-de-modification-de-texte">Balises de modification de texte</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#bases-en-css">Bases en CSS</a>
+                        <ul>
+                            <li>
+                                <a href="#mise-a-zero-du-css">"Mise à zéro" du CSS</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </aside>
         <!-- On divise le sujet "HTML CSS en deux partie distincte en utilisant les sections" -->
         <section>
@@ -78,7 +88,8 @@
                 <article>
                     <h4>Les paragraphes</h4>
                     <p>
-                        Les paragraphes séparent les blocs de texte à la verticale, mais s'il faut faire un retour chariot à l'intérieur de celui-ci, il faut utiliser la balise br : <br />
+                        Les paragraphes séparent les blocs de texte à la verticale, mais s'il faut faire un retour
+                        chariot à l'intérieur de celui-ci, il faut utiliser la balise br : <br />
                         Elle permet un retour à la ligne dans le flux du texte du paragraphe.
                     </p>
                     <h5>Exemple paragraphes et retours chariot</h5>
@@ -137,7 +148,7 @@
                     <dl>
                         <dt>Terme à décrire</dt>
                         <dd>Description du terme</dd>
-                        
+
                         <dt>secpnd terme à décrire</dt>
                         <dd>Description du second terme</dd>
                     </dl>
@@ -145,10 +156,10 @@
                     <dl>
                         <dt>Paris</dt>
                         <dd>Capitale de la France</dd>
-                        
+
                         <dt>Lyon</dt>
                         <dd>Centre Bocuse</dd>
-                        
+
                         <dt>Lille</dt>
                         <dd>"Les gens du Nord ont dans leurs yeux le bleu qui manque à leur décor"</dd>
                     </dl>
@@ -160,18 +171,23 @@
                     </p>
                     <blockquote>
                         <p>
-                            La balise blockquote met en exergue son contenu en ajoutant des marges extérieures à gauche et à droite.
+                            La balise blockquote met en exergue son contenu en ajoutant des marges extérieures à gauche
+                            et à droite.
                         </p>
                     </blockquote>
                     <p>
-                        Pour afficher une citation complète (citation, source, auteur, etc.) on va compléter avec toutes les balises en rapport avec les citations
+                        Pour afficher une citation complète (citation, source, auteur, etc.) on va compléter avec toutes
+                        les balises en rapport avec les citations
                     </p>
                     <blockquote>
                         <p>
-                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés
+                                deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à
+                                outils de la communication.</q>
                         </p>
                         <p>
-                            <cite>Au guet ! (1989),&nbsp;Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997 (ISBN 2-84172-045-4), p. 173</cite>
+                            <cite>Au guet ! (1989),&nbsp;Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997
+                                (ISBN 2-84172-045-4), p. 173</cite>
                         </p>
                     </blockquote>
                 </article>
@@ -181,7 +197,8 @@
                         <caption>Exemple de tableau complet</caption>
                         <thead>
                             <tr>
-                                <th>&nbsp;</th><!-- &nbsp; => espace insécable, permet d'imposer le caractère espace dans un flux de texte -->
+                                <th>&nbsp;</th>
+                                <!-- &nbsp; => espace insécable, permet d'imposer le caractère espace dans un flux de texte -->
                                 <th role="columnheader">Jeux</th>
                                 <th role="columnheader">Développeur Principal</th>
                                 <th role="columnheader">Plateforme</th>
@@ -189,7 +206,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th role="rowheader" rowspan="4">1986</th><!-- rowspan permet d'étirer une cellule vers le bas sur x lignes -->
+                                <th role="rowheader" rowspan="4">1986</th>
+                                <!-- rowspan permet d'étirer une cellule vers le bas sur x lignes -->
                                 <td>Asphalt</td>
                                 <td>Ubisoft</td>
                                 <td>Amstrad CPC</td>
@@ -212,7 +230,8 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>&nbsp;</th><!-- &nbsp; => espace insécable, permet d'imposer le caractère espace dans un flux de texte -->
+                                <th>&nbsp;</th>
+                                <!-- &nbsp; => espace insécable, permet d'imposer le caractère espace dans un flux de texte -->
                                 <th role="columnheader">Jeux</th>
                                 <th role="columnheader">Développeur Principal</th>
                                 <th role="columnheader">Plateforme</th>
@@ -251,11 +270,15 @@
                 <header>
                     <h3 id="balises-de-modification-de-texte">Balises de modification de texte</h3>
                 </header>
+                <h4>Taille, couleur et police de caractère</h4>
                 <p>
-                    Il existait des balises pour changer la couleur, la taille et la police de caractère d'une portion de texte, la balise "font", mais <font color="red" face="Impact" size="4">elle est dépréciée.</font>. On utilisera à la place un balise span à laquelle on associera une classe CSS qui comprendra le style qu'on appliquer à la portion de texte.
+                    Il existait des balises pour changer la couleur, la taille et la police de caractère d'une portion
+                    de texte, la balise "font", mais <font color="red" face="Impact" size="4">elle est dépréciée.</font>
+                    . On utilisera à la place un balise span à laquelle on associera une classe CSS qui comprendra le
+                    style qu'on appliquer à la portion de texte.
                 </p>
                 <style>
-                    .danger{
+                    .danger {
                         color: red;
                         font-family: Impact;
                         font-size: large;
@@ -263,6 +286,35 @@
                 </style>
                 <p>
                     Voilà un exemple de l'association d'une balise "span" <span class="danger">avec une classe</span>.
+                </p>
+                <h4>Le gras et l'italique</h4>
+                <p>
+                    Pour mettre en gras, on utilise normalement <b>la balise "b"</b>, pour l'italique, <i>c'est la
+                        balise "i"</i>, ces deux balises ne servent qu'a indiquer visuellement l'importance ou le ton du
+                    texte.<br />
+                    Il est possible d'ajouter de l'importance au niveau du référencement, <strong>en gras on utilisera
+                        "strong"</strong> pour indiquer d'une portion de texte est importante et pertinente sur le
+                    référencement, et en <em>italique on utilisera "em"</em> pour indique une "emphase" du texte, c'est
+                    à dire son importance stressante.
+                </p>
+                <p>
+                    <b><i>On peut combiner toutes les transformations de texte</i></b>.
+                </p>
+                <h4>D'autres transformations de texte</h4>
+                <p>
+                    A la base, le html servait à l'impression directe, c'est pour cela qu'il est possible de
+                    <u>souligner</u> du texte. En réalité, on évite de souligner du texte, car les visiteurs pourraient
+                    penser qu'il s'agit d'un lien et qu'il n'est pas fonctionnel.
+                </p>
+                <p>
+                    On peut à la place, <mark>surligner au feutre fluo</mark>, rayer du contenu <s>déprécié ou
+                        annulé</s>.
+                </p>
+                <p>
+                    Une surface de 45m<sup>2</sup><br />
+                    Un volume de 3m<sup>3</sup><br />
+                    2 H<sub>2</sub>O + H<sub>2</sub>SO<sup>4</sup> → 2 H<sub>3</sub>O+<sub>(aq)</sub> +
+                    SO<sub>4</sub><sup>2-</sup><sub>(aq)</sub>.
                 </p>
             </section>
         </section>
@@ -272,6 +324,17 @@
                 <h2 id="bases-en-css">Bases en CSS</h2>
             </header>
             <!-- On va séparer en sous section -->
+            <section>
+                <header>
+                    <h3 id="mise-a-zero-du-css">"Mise à zéro" du CSS</h3>
+                </header>
+                <article>
+                    <h4>Les polices de caractère</h4>
+                    <p>
+                        La police par défaut des navigateurs est faîte pour de l'impression directe, avec empâtement (type Times New Roman), en revanche, sur des écran rétro-éclairés il sera plus confortable d'utiliser une police sans empâtement (type arial ou helvetica)
+                    </p>
+                </article>
+            </section>
         </section>
     </main>
     <footer>
@@ -280,4 +343,5 @@
         </div>
     </footer>
 </body>
+
 </html>
