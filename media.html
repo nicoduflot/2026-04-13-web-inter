@@ -49,6 +49,26 @@
                             <li>
                                 <a href="#les-images">Les images</a>
                             </li>
+                            <li>
+                                <a href="#l-audio">L'audio'</a>
+                            </li>
+                            <li>
+                                <a href="#la-video">La vidéo'</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#media-embarques">Media embarqués</a>
+                        <ul>
+                            <li>
+                                <a href="#les-images-embarques">Les images embarqués</a>
+                            </li>
+                            <li>
+                                <a href="#l-audio-embarques">L'audio embarqués</a>
+                            </li>
+                            <li>
+                                <a href="#la-video-embarques">La vidéo embarqués</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -102,14 +122,105 @@
                         une légende, avec la balise figcaption.
                     </p>
                     <figure>
-                        <img loading="lazy" src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="description de l'image" />
+                        <img loading="lazy" src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt="description de l'image" class="img-fluid" />
                         <figcaption>
                             Wallpaper pour écran d'ordinateur sur l'univers de Fallout 4
                         </figcaption>
                     </figure>
                 </article>
             </section>
+            <section>
+                <header>
+                    <h3 id="l-audio">L'audio</h3>
+                </header>
+                <article>
+                    <h4>La balise audio</h4>
+                    <p>
+                        Pour mettre à disposition un fichier audio sur un site, on utlise la balise audio.
+                        Cette balise peut soit appeler un seul fichier, ou utiliser aussi la balise source.
+                        Utiliser plusieurs sources permet de s'adapter à la configuration de l'utilisateur. Un appareil,
+                        pour lire un fichier audio (ou vidéo) doit posséder les bon codecs. Si je met a disposition un
+                        fichier avec une extension que l'appareil ne connaît pas, j'aurais une erreur. Si je propose le
+                        même son dans des formats différents avec source, l'appareil lancera le premier fichier qu'il
+                        est capable de lire.
+                    </p>
+                    <figure>
+                        <audio controls>
+                            <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                            <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                        </audio>
+                        <figcaption>
+                            L'audio du village de Tristram dans le jeu vidéo Diablo
+                        </figcaption>
+                    </figure>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="la-video">La vidéo</h3>
+                </header>
+                <article>
+                    <h4>La balise video</h4>
+                    <p>
+                        La balise video se comporte comme la balise audio avec quelques attributs supplémentaires
+                    </p>
+                    <figure>
+                        <video controls src="./media/video/Fallout-4-Launch-Trailer.mp4" muted poster="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg"></video>
+                        <figcaption>
+                            Trailer lancement jeu vidéo Fallout 4 en 2015
+                        </figcaption>
+                    </figure>
+                </article>
+            </section>
         </section>
+        <section>
+            <header>
+                <h2 id="media-heberges">Media embarqués</h2>
+            </header>
+            <!-- On va séparer en sous section -->
+            <section>
+                <header>
+                    <h3 id="les-images-embarques">Les images embarqués</h3>
+                </header>
+                <article>
+                    <h4>Images embarquées : provenance extérieure</h4>
+                    <p>
+                        "embarquer" un média signifie que le media n'est pas hébergé sur le site que l'on visite mais
+                        sur un site ou hébergement spécialisé pour ce type de media.
+                    </p>
+                    <p>
+                        Pour les images, certains fora ou réseaux sociaux ne proposent pas directement le téléversement de fichiers dans les publications des utilisateurs, alors on se tourne vers un hébergeur multimédia sur lequel on téléverse les media que l'on "embarque" ensuite sur les publication précédemment citées.
+                    </p>
+                    <p>
+                        <b>sur flickr</b>
+                    </p>
+                    <figure>
+                        <a data-flickr-embed="true" href="https://www.flickr.com/photos/21117717@N07/5035348717/in/dateposted-public/" title="eludos"><img src="https://live.staticflickr.com/4113/5035348717_cd2d694e36_w.jpg" class="img-fluid" alt="eludos"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        <figcaption>
+                            Image hébergé sur un site spécialisé pour l'hébergement d'images, avec partage embarqué activé.
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Depuis un hébergeur personnel (<b>free</b>)
+                    </p>
+                    <figure>
+                        <img src="http://lesitedenikko.free.fr/pages/images/articles/20090616/DSCN3277.jpg" />
+                        <figcaption>
+                            Imga hébergée sur un hébergeur privé
+                        </figcaption>
+                    </figure>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="l-audio-embarques">L'audio embarqués</h3>
+                </header>
+            </section>
+            <section>
+                <header>
+                    <h3 id="la-video-embarques">La vidéo embarqués</h3>
+                </header>
+            </section>
     </main>
     <footer>
         <div>

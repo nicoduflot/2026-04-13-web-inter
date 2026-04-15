@@ -150,6 +150,7 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     line-height: 1.5rem;
+    scroll-behavior: smooth;
 }
 
 /* 
@@ -163,7 +164,10 @@ Déclarations générales
     box-sizing: border-box;
 }
 
-
+video{
+    max-width: 100%;
+    background-color: black;
+}
 
 /*
 Déclaration des classes
@@ -196,6 +200,10 @@ Déclaration des classes
 
 .avatar-center-top{
     object-position: center top;
+}
+
+.img-fluid{
+    max-width: 100%;
 }
 
 /*
