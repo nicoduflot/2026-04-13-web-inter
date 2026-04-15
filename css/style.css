@@ -206,6 +206,14 @@ Déclaration des classes
     max-width: 100%;
 }
 
+/* formulaire */
+
+form{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*
 Déclaration selon la structure html
 */
