@@ -149,8 +149,34 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
 :root{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    line-height: 1.5rem;
+    --line-height: 1.5rem;
+    line-height: var(--line-height);
     scroll-behavior: smooth;
+    --general-font-color: #333333;
+    color: var(--general-font-color);
+    /* variables formulaire */
+    --form-border-color: rgb(102, 102, 102);
+    --form-border-color-50: rgba(102, 102, 102, 0.5);
+    --form-border-radius: calc( 1rem / 4 );
+    --input-border-radius: calc( var(--form-border-radius) / 2 );
+    --gutter: calc( 1rem / 2);
+
+    --light-bg-color: #ddd;
+    --dark-bg-color: rgb(69, 69, 69);
+    --info-bg-color: #b4d0e8;
+    --danger-bg-color: #f1aeb5;
+    --success-bg-color: #a3cfbb;
+    --warning-bg-color: #f1d3ae;
+    
+    --light-border-color: #666;
+    --dark-border-color: black;
+    --info-border-color: #1583e3;
+    --danger-border-color: #ea2a3d;
+    --success-border-color: #07ca73;
+    --warning-border-color: #ec8a12;
+
+
+
 }
 
 /* 
@@ -206,12 +232,96 @@ Déclaration des classes
     max-width: 100%;
 }
 
-/* formulaire */
+/* formulaire de contact (si un formulaire possède au moins la classe .contact-form) */
 
-form{
+form.contact-form{
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*
+On essai d'appliquer au maximum le D.R.Y. : Don't Repeat Yourself
+*/
+
+form.contact-form fieldset,
+form.contact-form legend
+{
+    border-style: solid;
+    border-color: var(--form-border-color);
+    border-radius: var(--form-border-radius);
+    border-width: 1px;
+}
+
+form.contact-form legend{
+    padding: 0 var(--gutter);
+    /*
+    équivalent à :
+    padding-top: 0;
+    padding-right: var(--gutter);
+    padding-bottom: 0;
+    padding-left: var(--gutter);
+    */
+}
+
+form.contact-form fieldset{
+    margin-bottom: var(--gutter);
+}
+
+form.contact-form input,
+form.contact-form select,
+form.contact-form textarea{
+    font-size: 1rem;
+}
+/*
+un élément input de type number descendant d'un formulaire ayant au moins la classe contact-form 
+form.contact-form input[type="number"]{
+    font-size: 0.8rem;
+}
+*/
+form.contact-form input[type="text"],
+form.contact-form input[type="email"],
+form.contact-form input[type="number"],
+form.contact-form textarea
+{
+    border-style: solid;
+    line-height: var(--line-height);
+    border-radius: var(--input-border-radius);
+}
+
+form.contact-form select{
+    border-style: solid;
+    height: var(--line-height);
+    border-radius: var(--input-border-radius);
+}
+
+/* Gérer la couleur des bordures :
+- champs non obligatoires : base
+- champs obligatoires vides : --danger-bg-color
+- champs obligatoires rempli : --success-bg-color
+*/
+
+/* si champs requis invalide */
+form.contact-form input[type="text"]:invalid,
+form.contact-form input[type="email"]:invalid,
+form.contact-form input[type="number"]:invalid,
+form.contact-form textarea:invalid,
+form.contact-form select:invalid{
+    border-color: var(--danger-bg-color);
+}
+
+/* si champs requis valide */
+form.contact-form input[type="text"]:valid,
+form.contact-form input[type="email"]:valid,
+form.contact-form input[type="number"]:valid,
+form.contact-form textarea:valid,
+form.contact-form select:valid{
+    border-color: var(--success-bg-color);
+}
+
+form.contact-form textarea{
+    width: 100%;
+    height: 25vh;
 }
 
 /*
