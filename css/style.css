@@ -162,7 +162,7 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     --gutter: calc( 1rem / 2);
 
     --light-bg-color: #ddd;
-    --dark-bg-color: rgb(69, 69, 69);
+    --dark-bg-color: #454545;
     --info-bg-color: #b4d0e8;
     --danger-bg-color: #f1aeb5;
     --success-bg-color: #a3cfbb;
@@ -175,7 +175,9 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     --success-border-color: #07ca73;
     --warning-border-color: #ec8a12;
 
-
+    --header-bg-color: #333;
+    --header-color: white;
+    --general-link-color: #b75a0d;
 
 }
 
@@ -190,14 +192,28 @@ Déclarations générales
     box-sizing: border-box;
 }
 
+a, 
+a:visited{
+    color: var(--general-link-color);
+    text-decoration: none;
+}
+
 video{
     max-width: 100%;
     background-color: black;
 }
 
+
+
 /*
 Déclaration des classes
 */
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .gauche{
     float: left;
@@ -328,11 +344,81 @@ form.contact-form textarea{
 Déclaration selon la structure html
 */
 
+body{
+    margin: 0;
+}
 
+body > header,
+body > nav, 
+body > footer{
+    background-color: var(--header-bg-color);
+    color: var(--header-color);
+}
+
+body > nav ul{
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+body > nav li{
+    border-top: 1px solid var(--header-color);
+}
+
+body > nav ul a,
+body > nav ul a:visited{
+    color: var(--header-color);
+    text-decoration: none;
+    display: block;
+}
+
+body > nav ul a:hover,
+body > nav ul a:focus,
+body > nav ul a:focus-visible{
+    color: var(--header-bg-color);
+    background-color: var(--header-color);
+    outline: none;
+}
 
 /*
 Déclaration selon l'affichage : media-queries
 */
+
+/* media-queries pour affichage d'écran */
+@media screen and (min-width: 576px){
+    /* point de rupture small, quand la largeur de l'écran atteint ou dépasse 576px */
+    .container{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    /* point de rupture medium, quand la largeur de l'écran atteint ou dépasse 768px */
+    .container{
+        width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    /* point de rupture large, quand la largeur de l'écran atteint ou dépasse 992px */
+    .container{
+        width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    /* point de rupture extra-large, quand la largeur de l'écran atteint ou dépasse 1200px */
+    .container{
+        width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    /* point de rupture extra-extra-large, quand la largeur de l'écran atteint ou dépasse 1400px */
+    .container{
+        width: 1320px;
+    }
+}
 
 /* CSS impression */
 @media print{
