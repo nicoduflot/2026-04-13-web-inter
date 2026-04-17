@@ -355,10 +355,19 @@ body > footer{
     color: var(--header-color);
 }
 
+body > header > *,
+body > footer > *,
+body > nav ul,
+main article,
+main aside,
+main header:not(article header){
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
 body > nav ul{
     margin: 0;
     list-style-type: none;
-    padding-left: 0;
 }
 
 body > nav li{
@@ -396,6 +405,20 @@ Déclaration selon l'affichage : media-queries
     /* point de rupture medium, quand la largeur de l'écran atteint ou dépasse 768px */
     .container{
         width: 720px;
+    }
+
+    body > nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav li{
+        border-top: unset;
+    }
+
+    body > nav ul a{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
