@@ -10,6 +10,110 @@
     <script src="./js/bootstrap.bundle.js"></script>
 </head>
 <body>
+    <!--
+    Bootstrap intègre des classes utilitaires
+    par exemple pour les marge intérieures (padding) et les marges extérieures (margin)
+    Le type de marge :
+    m : margin  (tous les côtés)
+    p : padding (tous les côtés)
+
+    Application de la marge 
+        - s : start
+        - e : end
+        - t : top
+        - b : bottom
+        - x : marge appliquée à gauche et à droite
+        - y : marge appliquée en haut et en bas
     
+    La valeur de marge : de 1 à 6
+
+    exemple : 
+        marge extérieure en x de 2  => mx-2
+        marge intérieure en y de 3  => py-3
+        marge intérieur en y de 1   => py-1
+    -->
+    <header role="banner" class="bg-dark text-white py-1" data-bs-theme="dark">
+        <div class="container">
+            <h1>Bootstrap</h1>
+        </div>
+    </header>
+    <nav role="navigation" class="bg-dark text-white py-1" data-bs-theme="dark">
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link" title="Introduction HTML CSS" target="_self">Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./media.html" class="nav-link" title="Les media en HTML - CSS" target="_self">Media</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./formulaire.html" class="nav-link" title="Les formulaires en HTML - CSS" target="_self">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./animations.html" class="nav-link" title="Les animations en HTML - CSS" target="_self">Animations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./bootstrap.html" class="nav-link active" aria-current="page" title="Le framework CSS bootstrap" target="_self">Bootstrap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="row mt-2">
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-2">
+                <article class="card">
+                    <h2>Titre</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad nostrum cupiditate eaque nihil deleniti vero error cum veniam! Itaque voluptatum nobis consectetur, fugiat dolorem accusamus doloribus porro ut ex.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, in velit? Excepturi accusantium nihil, similique cupiditate dolorem maiores sapiente, quam magnam sit vero quae asperiores facilis nesciunt vitae a ab?
+                    </p>
+                    <button class="btn btn-outline-primary">Lire la suite</button>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-2">
+                <article>
+                    <h2>Titre</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad nostrum cupiditate eaque nihil deleniti vero error cum veniam! Itaque voluptatum nobis consectetur, fugiat dolorem accusamus doloribus porro ut ex.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, in velit? Excepturi accusantium nihil, similique cupiditate dolorem maiores sapiente, quam magnam sit vero quae asperiores facilis nesciunt vitae a ab?
+                    </p>
+                    <button class="btn btn-outline-primary">Lire la suite</button>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-2">
+                <article>
+                    <h2>Titre</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad nostrum cupiditate eaque nihil deleniti vero error cum veniam! Itaque voluptatum nobis consectetur, fugiat dolorem accusamus doloribus porro ut ex.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, in velit? Excepturi accusantium nihil, similique cupiditate dolorem maiores sapiente, quam magnam sit vero quae asperiores facilis nesciunt vitae a ab?
+                    </p>
+                    <button class="btn btn-outline-primary">Lire la suite</button>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-2">
+                <article>
+                    <h2>Titre</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad nostrum cupiditate eaque nihil deleniti vero error cum veniam! Itaque voluptatum nobis consectetur, fugiat dolorem accusamus doloribus porro ut ex.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, in velit? Excepturi accusantium nihil, similique cupiditate dolorem maiores sapiente, quam magnam sit vero quae asperiores facilis nesciunt vitae a ab?
+                    </p>
+                    <button class="btn btn-outline-primary">Lire la suite</button>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white py-1" data-bs-theme="dark">
+        <div class="container">
+            &copy; DAWAN - 2026
+        </div>
+    </footer>
 </body>
 </html>
