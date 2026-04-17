@@ -144,6 +144,15 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
 
 */
 
+/*
+Il est possible d'importer des fichier css dans un autre fichier css
+
+                     /!\ ATTENTION /!\
+    
+    Les imports doivent OBLIGATOIREMENT ÊTRE FAITS AVANT toute déclaration de propriété CSS (les commentaires eux peuvent être écris avant)
+*/
+@import url('./zen-dots.css');
+
 
 /* déclaration de surcharge du CSS navigateur à la racine */
 :root{
@@ -208,6 +217,11 @@ video{
 /*
 Déclaration des classes
 */
+
+.site-title{
+    font-family: 'zen-dots';
+    font-size: calc(1.2rem + 1.5vw);
+}
 
 .container{
     width: 100%;
@@ -346,6 +360,11 @@ Déclaration selon la structure html
 
 body{
     margin: 0;
+}
+
+body > header{
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
 }
 
 body > header,
